@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DepositSlidesView" customModule="wkwebview" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xad-hk-ht1">
+                    <rect key="frame" x="140" y="200" width="95.5" height="167.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="140"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzR-F7-SmQ">
+                    <rect key="frame" x="105.5" y="258.5" width="27" height="50.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="42"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cEY-Gc-ebg">
+                    <rect key="frame" x="40" y="432" width="295" height="50"/>
+                    <color key="backgroundColor" red="0.87450980389999999" green="0.39607843139999999" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="HBU-2b-GcG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                    <state key="normal" title="Deposit">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.94509803920000002" green="0.59607843140000005" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xad-hk-ht1" firstAttribute="leading" secondItem="VzR-F7-SmQ" secondAttribute="trailing" constant="7.5" id="DNs-AC-tYe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cEY-Gc-ebg" secondAttribute="trailing" constant="40" id="I8m-lQ-xIi"/>
+                <constraint firstItem="xad-hk-ht1" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="PIa-Kn-zO3"/>
+                <constraint firstItem="cEY-Gc-ebg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="V2u-22-ffe"/>
+                <constraint firstItem="VzR-F7-SmQ" firstAttribute="centerY" secondItem="xad-hk-ht1" secondAttribute="centerY" id="W53-6F-eLM"/>
+                <constraint firstItem="xad-hk-ht1" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-60" id="gkT-bU-0nr"/>
+                <constraint firstItem="cEY-Gc-ebg" firstAttribute="top" secondItem="xad-hk-ht1" secondAttribute="bottom" constant="64.5" id="v9l-Bb-vR1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="confirmPriceLabel" destination="xad-hk-ht1" id="rgZ-hB-Dvi"/>
+                <outlet property="depositButton" destination="cEY-Gc-ebg" id="iEu-6M-26l"/>
+            </connections>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+</document>
